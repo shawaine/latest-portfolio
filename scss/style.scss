@@ -1,4 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Poppins|Ubuntu:700&display=swap");
+/*font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Ubuntu', sans-serif;*/
+@import "./variables";
+@import "./mixins";
+@import "./nav";
+@import "./home";
+@import "./project";
+@import "./skills";
+@import "./stack";
+@import "./about";
+@import "./contact";
+@import "./footer";
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }

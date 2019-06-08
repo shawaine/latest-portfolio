@@ -9,5 +9,110 @@ html(lang="en")
         link(rel="stylesheet", href="./css/style.css")
         title Cidro Zeirwayne
     body
+        nav
+            div.branding
+                h1 Cidro Zeirwayne
+            div.menu
+                ul
+                    li Home
+                    li Projects
+                    li Skills
+                    li Tech Stack
+                    li About Me
+                    li Contact
+
+        section#home
+            div.intro
+                div.name
+                    h1 Cidro Zeirwayne
+                div.quote
+                    p Good code is like a good joke, it needs no explanation
+                div.arrow-down
+                    img(src="./image/arrow-down-white.png", alt="arrow-down")
+
+        section#projects
+            h3 Projects
+            div.project-list
+                div.container
+                    div.preview
+                        h1 GIF Here
+                    div.info
+                        p Description
+                        a.demo(href="") 
+                        p |
+                        a.source(href="")
+
+        section#skills
+            h3 Skills
+            div.container.designer
+                ul Designer
+                    li UI/UX
+                    li Prototyping
+            div.container.developer
+                ul Developer
+                    li HTML5
+                    li Pug
+                    li CSS3
+                    li SCSS
+                    li Bootstrap
+                    li Bulma
+                    li JavaScript
+                    li jQuery
+                    li React.js
+                    li C#
+                    li MySQL
+            div.container.tools
+                ul Tool Kit
+                    li Visual Studio
+                    li VS Code
+                    li NPM
+                    li Git
+                    li GitHub
+                    li Scrum
+                    li Adobe Photoshop
+                    li Adobe Xd
+
+        section#stacks
+            h3 Tech Stack
+                h1 Working on it.
+
+        section#about
+            h3 About Me
+            div.container
+                h3 Hi, My name is Zeirwayne Yzaack P. Cidro
+                h4 Software & Front-End Developer
+                p 
+                | A passionate Software and Web developer 
+                | from Cabuyao City, Laguna, Philipines. 
+                | Recent graduate at Pamantasan ng Cabuyao with a degree of 
+                | Bachelor of Science in Information Technology, 21 years old. 
+                |
+                | My current objective is to obtain a work position in the field of 
+                | Software or Web Development where I can grow and enhance 
+                | my skills and share it in the field of software or web development. 
+
+        section#contact
+            h3 Contact (still working on backend stuff.   :x)
+            div.container
+                form(method='POST')
+                    h4 Send me an email
+                    div.field
+                        label(for='name') Name:
+                        input.name(type='text', placeholder='Lastname then Firstname' name='name')
+                    div.field
+                        label(for='email') Email:
+                        input.email(type='email', placeholder='name@email.com' name='email')
+                    div.field
+                        label(for='reason') Reason:
+                        input.reason(type='text', placeholder='Just to say Hi' name='reason')
+                    div.field
+                        label(for='message') Message:
+                        textarea.message(type='text', cols="30", rows="5", placeholder='Enter message here' name='message')
+                    button.btn.btn-primary(type='submit') Sign up
+
+        footer
+
+
+
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
         script(src="./js/app.js")
