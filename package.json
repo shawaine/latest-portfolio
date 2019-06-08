@@ -1,0 +1,16 @@
+{
+  "name": "latest-portfolio",
+  "version": "1.0.0",
+  "description": "my latest portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "webpack-dev-server"
+  },
+  "author": "Cidro Zeirwayne",
+  "license": "MIT",
+  "devDependencies": {
+    "pug": "^2.0.3",
+    "sass": "^1.21.0"
+  }
+}
