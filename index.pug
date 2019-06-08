@@ -14,20 +14,28 @@ html(lang="en")
                 h1 Cidro Zeirwayne
             div.menu
                 ul
-                    li Home
-                    li Projects
-                    li Skills
-                    li Tech Stack
-                    li About Me
-                    li Contact
+                    li 
+                        a(href="#home") Home
+                    li 
+                        a(href="#projects") Projects
+                    li 
+                        a(href="#skills") Skills
+                    li 
+                        a(href="#stack") Tech Stack
+                    li 
+                        a(href="#about") About Me
+                    li 
+                        a(href="#contact") Contact
 
         section#home
+            div.blurred-div
             div.intro
                 div.name
                     h1 Cidro Zeirwayne
                 div.quote
                     p Good code is like a good joke, it needs no explanation
-                div.arrow-down
+            div.arrow-down
+                a(href="#projects")
                     img(src="./image/arrow-down-white.png", alt="arrow-down")
 
         section#projects
@@ -72,7 +80,7 @@ html(lang="en")
                     li Adobe Photoshop
                     li Adobe Xd
 
-        section#stacks
+        section#stack
             h3 Tech Stack
                 h1 Working on it.
 

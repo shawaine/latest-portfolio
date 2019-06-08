@@ -4,5 +4,93 @@ font-family: 'Ubuntu', sans-serif;*/
 * {
   margin: 0;
   padding: 0;
+  user-select: none;
+  scroll-behavior: smooth;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif; }
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #191919; }
+
+nav {
+  position: fixed;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  z-index: 100; }
+  nav .branding {
+    margin-left: 3em; }
+    nav .branding h1 {
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      font-size: 1.3em;
+      font-family: "Ubuntu", sans-serif; }
+  nav .menu {
+    margin-right: 2em; }
+    nav .menu li {
+      display: inline;
+      margin-left: 1em;
+      padding: 0.8em;
+      letter-spacing: 0.2em; }
+      nav .menu li a {
+        color: #4b4b4b;
+        list-style: none;
+        text-decoration: none;
+        font-size: 0.8em; }
+        nav .menu li a:hover {
+          color: black; }
+
+#home {
+  background: url("../image/home-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  #home .blurred-div {
+    background: url("../image/home-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    height: 30vh;
+    width: 100%;
+    filter: blur(10px) brightness(50%); }
+  #home .intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 20vh;
+    width: 100%;
+    z-index: 1; }
+    #home .intro .name {
+      width: 60vw;
+      border-right: 2px solid white;
+      padding-right: 3.5em; }
+      #home .intro .name h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 5em;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: white; }
+    #home .intro .quote {
+      width: 28vw; }
+      #home .intro .quote p {
+        font-family: "Gloria Hallelujah", cursive;
+        font-size: 1.5em;
+        color: white; }
+  #home .arrow-down {
+    position: absolute;
+    bottom: 2vh; }
+    #home .arrow-down img {
+      height: 10vh;
+      width: auto;
+      animation: blinker 0.7s ease infinite alternate; }
+
+@keyframes blinker {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }

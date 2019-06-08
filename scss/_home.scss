@@ -1,0 +1,64 @@
+#home {
+  background: url("../image/home-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .blurred-div {
+    background: url("../image/home-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    height: 30vh;
+    width: 100%;
+    filter: blur(10px) brightness(50%);
+  }
+  .intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 20vh;
+    width: 100%;
+    z-index: 1;
+    .name {
+      width: 60vw;
+      border-right: 2px solid white;
+      padding-right: 3.5em;
+      h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 5em;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+    .quote {
+      width: 28vw;
+      p {
+        font-family: "Gloria Hallelujah", cursive;
+        font-size: 1.5em;
+        color: white;
+      }
+    }
+  }
+  .arrow-down {
+    position: absolute;
+    bottom: 2vh;
+    img {
+      height: 10vh;
+      width: auto;
+      animation: blinker 0.7s ease infinite alternate;
+    }
+  }
+}
+
+@keyframes blinker {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
