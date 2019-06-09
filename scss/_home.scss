@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  .blurred-div {
+  .blurred-part {
     background: url("../image/home-bg.jpg") no-repeat center center fixed;
     background-size: cover;
     position: absolute;
@@ -22,13 +22,15 @@
     height: 20vh;
     width: 100%;
     z-index: 1;
+    flex-wrap: wrap;
     .name {
       width: 60vw;
       border-right: 2px solid white;
       padding-right: 3.5em;
       h1 {
+        transform: translateY(-10%);
         font-family: "Ubuntu", sans-serif;
-        font-size: 5em;
+        font-size: 8vh;
         letter-spacing: 0.3em;
         text-transform: uppercase;
         color: white;
@@ -37,8 +39,9 @@
     .quote {
       width: 28vw;
       p {
+        transform: translateY(-10%);
         font-family: "Gloria Hallelujah", cursive;
-        font-size: 1.5em;
+        font-size: 3vh;
         color: white;
       }
     }

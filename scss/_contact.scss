@@ -1,0 +1,35 @@
+#contact {
+  height: 90vh;
+  color: black;
+  background-color: white;
+
+  h1 {
+    margin-bottom: 2vh;
+    font-size: 1.3em;
+  }
+  .input,
+  select {
+    border: 1px solid #3d3d3d;
+  }
+
+  select,
+  option {
+    text-align-last: center;
+  }
+  .control {
+    text-align: center;
+    .button {
+      background-color: #3d3d3d;
+      height: 5vh;
+      width: 10vw;
+    }
+  }
+  .select,
+  select {
+    width: 30vw;
+  }
+  .textarea {
+    resize: none;
+    border: 1px solid #3d3d3d;
+  }
+}

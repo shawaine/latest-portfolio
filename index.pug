@@ -10,9 +10,12 @@ html(lang="en")
         title Cidro Zeirwayne
     body
         nav
-            div.branding
-                h1 Cidro Zeirwayne
-            div.menu
+            .branding
+                a(href="#home") 
+                    h1 
+                        | Cidro 
+                        | Zeirwayne
+            .menu
                 ul
                     li 
                         a(href="#home") Home
@@ -20,106 +23,143 @@ html(lang="en")
                         a(href="#projects") Projects
                     li 
                         a(href="#skills") Skills
-                    li 
-                        a(href="#stack") Tech Stack
+                    //- li 
+                    //-     a(href="#stack") Tech Stack
                     li 
                         a(href="#about") About Me
                     li 
                         a(href="#contact") Contact
 
-        section#home
-            div.blurred-div
-            div.intro
-                div.name
+        section#home.full-screen
+            .blurred-part
+            .intro
+                .name
                     h1 Cidro Zeirwayne
-                div.quote
+                .quote
                     p Good code is like a good joke, it needs no explanation
-            div.arrow-down
+            .arrow-down
                 a(href="#projects")
                     img(src="./image/arrow-down-white.png", alt="arrow-down")
 
-        section#projects
-            h3 Projects
-            div.project-list
-                div.container
-                    div.preview
+        section#projects.full-screen
+            .heading
+                h3 Projects
+            .project-list
+                .project-container
+                    .preview.center
                         h1 GIF Here
-                    div.info
+                    .info
+                        span
                         p Description
-                        a.demo(href="") 
-                        p |
-                        a.source(href="")
+                        br
+                        a.demo(href="") View demo | 
+                        a.source(href="") View source
 
-        section#skills
-            h3 Skills
-            div.container.designer
-                ul Designer
-                    li UI/UX
-                    li Prototyping
-            div.container.developer
-                ul Developer
-                    li HTML5
-                    li Pug
-                    li CSS3
-                    li SCSS
-                    li Bootstrap
-                    li Bulma
-                    li JavaScript
-                    li jQuery
-                    li React.js
-                    li C#
-                    li MySQL
-            div.container.tools
-                ul Tool Kit
-                    li Visual Studio
-                    li VS Code
-                    li NPM
-                    li Git
-                    li GitHub
-                    li Scrum
-                    li Adobe Photoshop
-                    li Adobe Xd
+        section#skills.full-screen
+            .heading
+                h3 Skills
+            .skill-container
+                .skill-list.designer
+                    //- img.icon(src="./image/designer-white.png", alt="designer-white")
+                    ul Designer
+                        li UI
+                        li UX
+                        li Prototyping
+                .skill-list.developer
+                    //- img.icon(src="./image/developer-white.png", alt="developer-white") 
+                    ul Developer
+                        li HTML5
+                        li Pug
+                        li CSS3
+                        li SCSS
+                        li Bootstrap
+                        li Bulma
+                        li JavaScript
+                        li jQuery
+                        li React.js
+                        li C#
+                        li MySQL
+                .skill-list.tools
+                    //- img.icon(src="./image/toolkit-white.png", alt="toolkit-white")
+                    ul Tool Kit
+                        li Visual Studio
+                        li VS Code
+                        li NPM
+                        li Git
+                        li GitHub
+                        li Scrum
+                        li Adobe Photoshop
+                        li Adobe Xd
 
-        section#stack
-            h3 Tech Stack
-                h1 Working on it.
+        //- section#stack.full-screen
+        //-     .heading
+        //-         h3 Tech Stack
+        //-     .container
+        //-         h1 Working on it.
 
-        section#about
-            h3 About Me
-            div.container
-                h3 Hi, My name is Zeirwayne Yzaack P. Cidro
-                h4 Software & Front-End Developer
+        section#about.full-screen
+            .heading
+                h3 About Me
+            .container
+                h1 Hi, My name is Zeirwayne Yzaack P. Cidro
+                h2 Front-End Developer
                 p 
-                | A passionate Software and Web developer 
-                | from Cabuyao City, Laguna, Philipines. 
-                | Recent graduate at Pamantasan ng Cabuyao with a degree of 
-                | Bachelor of Science in Information Technology, 21 years old. 
-                |
-                | My current objective is to obtain a work position in the field of 
-                | Software or Web Development where I can grow and enhance 
-                | my skills and share it in the field of software or web development. 
+                    | A passionate Software and Web developer 
+                    | from Cabuyao City, Laguna, Philipines. 
+                    | Recent graduate at Pamantasan ng Cabuyao with a degree of 
+                    | Bachelor of Science in Information Technology, 21 years old. 
+                    |
+                    | My current objective is to obtain a work position in the field of 
+                    | Software or Web Development where I can grow and enhance 
+                    | my skills and share it in the field of software or web development. 
 
-        section#contact
-            h3 Contact (still working on backend stuff.   :x)
-            div.container
+        section#contact.full-screen
+            .heading
+                h3 Contact 
+                    h6 (still working o n backend stuff.   :x)
+            .container
                 form(method='POST')
-                    h4 Send me an email
-                    div.field
-                        label(for='name') Name:
-                        input.name(type='text', placeholder='Lastname then Firstname' name='name')
-                    div.field
-                        label(for='email') Email:
-                        input.email(type='email', placeholder='name@email.com' name='email')
-                    div.field
-                        label(for='reason') Reason:
-                        input.reason(type='text', placeholder='Just to say Hi' name='reason')
-                    div.field
-                        label(for='message') Message:
-                        textarea.message(type='text', cols="30", rows="5", placeholder='Enter message here' name='message')
-                    button.btn.btn-primary(type='submit') Sign up
+                    h1 Send me an email
+                    .field
+                        label.label Name
+                         .control
+                            input.input(type='text', placeholder='lastname then firstname')
+                    .field
+                        label.label.left Email
+                        .control.has-icons-left.has-icons-right
+                            input.input(type='email', placeholder='name@email.com' required)
+                    .field
+                        label.label Reason
+                        .control
+                             .select
+                                select
+                                    option Just to say Hi
+                                    option Comment
+                                    option Idea
+                                    option Job
+                                    option Other
+                    .field
+                        label.label Message
+                         .control
+                            textarea.textarea(placeholder='enter message here' required)
+                   
+                    .field.is-grouped.center
+                        .control
+                            button.button.is-link Send
+                       
+
 
         footer
-
+            .social-media
+                a(href="https://www.linkedin.com/in/cidrozeirwayne/")
+                    img.sicon(src="./image/linkedin.png", alt="linkedin")
+                a(href="")
+                    img.sicon(src="./image/resume.png", alt="resume")
+                a(href="https://github.com/shawaine")
+                    img.sicon(src="./image/github.png", alt="github")
+            .rights
+                p #[strong Cidro Zeirwayne] | All rights reserved | June 2019
+                p Host with &hearts; by #[strong Github]
 
 
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")

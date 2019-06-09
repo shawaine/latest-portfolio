@@ -1,0 +1,21 @@
+#skills {
+  background-color: #3d3d3d;
+  .skill-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .skill-list {
+      height: 50vh;
+      margin-top: 5vh;
+      ul {
+        padding: 1em;
+        background-color: #191919;
+        margin-left: 2.5vw;
+        font-size: 2em;
+        li {
+          font-size: 0.65em;
+        }
+      }
+    }
+  }
+}

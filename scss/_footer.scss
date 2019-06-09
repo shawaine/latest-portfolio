@@ -1,0 +1,22 @@
+footer {
+  .social-media {
+    background-color: #3d3d3d;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .sicon {
+      margin: 2vh;
+      height: 5vh;
+      cursor: pointer;
+    }
+  }
+  .rights {
+    background-color: #191919;
+    color: white;
+    padding: 1vh;
+    strong {
+      letter-spacing: 0.2em;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+#projects {
+  background-color: #3d3d3d;
+  transition: 1s ease;
+  .project-list {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .project-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      height: 20vh;
+      width: 70vw;
+      .preview {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 30vw;
+        background-color: #707070;
+      }
+      .info {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 40vw;
+        background-color: whitesmoke;
+        p {
+          padding-top: 2vh;
+          color: black;
+        }
+        a {
+          color: black;
+          text-decoration: none;
+          padding-top: 5vh;
+          padding-bottom: 2vh;
+        }
+      }
+    }
+  }
+}
