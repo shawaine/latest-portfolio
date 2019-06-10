@@ -1,0 +1,16 @@
+#preloader {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.preloader-done {
+  visibility: hidden;
+  pointer-events: none;
+}

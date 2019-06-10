@@ -6,9 +6,12 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         meta(name="theme-color", content="#000")
         link(rel="shortcut icon", href="./image/favicon.png", type="image/x-icon")
-        link(rel="stylesheet", href="./css/style.css")
+        link(rel="stylesheet", href="./scss/style.css")
         title Cidro Zeirwayne
     body
+        #preloader
+            img(src="./gif/ident-frigeni-dribbble.gif", alt="preloader gif")
+
         nav
             .branding
                 a(href="#home") 
@@ -47,13 +50,22 @@ html(lang="en")
             .project-list
                 .project-container
                     .preview.center
-                        h1 GIF Here
+                      img(src="./image/calc.png", alt="calculator")
                     .info
                         span
-                        p Description
+                        p A simple calculator that has a keypress and keydown event for usability.
                         br
-                        a.demo(href="") View demo | 
-                        a.source(href="") View source
+                        a.demo(href="https://shawaine.github.io/calculator/" target="_blank") View demo | 
+                        a.source(href="https://github.com/shawaine/calculator" target="_blank") View source
+                .project-container
+                    .preview.center
+                         img(src="./image/rec.png", alt="calculator")
+                    .info
+                        span
+                        p A single page app that fetches a recipe using API.
+                        br
+                        a.demo(href="https://shawaine.github.io/" target="_blank") View demo | 
+                        a.source(href="https://github.com/shawaine/" target="_blank") View source
 
         section#skills.full-screen
             .heading
@@ -101,9 +113,9 @@ html(lang="en")
             .heading
                 h3 About Me
             .container
-                h1 Hi, My name is Zeirwayne Yzaack P. Cidro
-                h2 Front-End Developer
-                p 
+                h1.greeting Hi, My name is Zeirwayne Yzaack P. Cidro
+                h2.part Front-End Developer
+                p.story
                     | A passionate Software and Web developer 
                     | from Cabuyao City, Laguna, Philipines. 
                     | Recent graduate at Pamantasan ng Cabuyao with a degree of 
@@ -118,17 +130,16 @@ html(lang="en")
                 h3 Contact 
                     h6 (still working o n backend stuff.   :x)
             .container
-                form(method='POST')
+                form(method='POST' onsubmit="return sendEmail()")
                     h1 Send me an email
-                    .field
+                    .field.top-margin
                         label.label Name
                          .control
                             input.input(type='text', placeholder='lastname then firstname')
-                    .field
+                    .field.top-margin
                         label.label.left Email
-                        .control.has-icons-left.has-icons-right
                             input.input(type='email', placeholder='name@email.com' required)
-                    .field
+                    .field.top-margin
                         label.label Reason
                         .control
                              .select
@@ -138,16 +149,14 @@ html(lang="en")
                                     option Idea
                                     option Job
                                     option Other
-                    .field
+                    .field.top-margin
                         label.label Message
                          .control
                             textarea.textarea(placeholder='enter message here' required)
                    
-                    .field.is-grouped.center
+                    .field.is-grouped.center.top-margin
                         .control
                             button.button.is-link Send
-                       
-
 
         footer
             .social-media

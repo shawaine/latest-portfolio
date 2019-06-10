@@ -11,18 +11,33 @@
     p {
       text-align: left;
       width: 70vw;
+      opacity: 0;
     }
-    h1 {
+    .greeting {
       margin-top: 10vh;
       font-size: 1.8em;
     }
-    h2 {
+    .part {
       font-family: "Gloria Hallelujah", cursive;
     }
-    p {
+    .story {
       margin-top: 10vh;
       font-size: 1.2em;
       line-height: 2em;
+    }
+    .slide {
+      animation: slideToRight 1s ease forwards;
+    }
+  }
+
+  @keyframes slideToRight {
+    from {
+      transform: translateX(-10%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
     }
   }
 }

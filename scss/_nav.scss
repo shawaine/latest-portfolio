@@ -1,6 +1,6 @@
 nav {
   position: fixed;
-  height: 5vh;
+  height: 10vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@ nav {
       h1 {
         letter-spacing: 0.4em;
         text-transform: uppercase;
-        font-size: 1.3em;
+        font-size: 1.5em;
         font-family: "Ubuntu", sans-serif;
       }
     }
@@ -40,6 +40,12 @@ nav {
           color: black;
         }
       }
+    }
+  }
+  @media screen and (max-width: 1020px) {
+    .menu {
+      visibility: hidden;
+      pointer-events: none;
     }
   }
 }

@@ -5,14 +5,16 @@
     height: 80vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-bottom: 10vh;
     .project-container {
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       background-color: black;
-      height: 20vh;
+      height: 30vh;
       width: 70vw;
       .preview {
         position: absolute;
@@ -20,6 +22,10 @@
         height: 100%;
         width: 30vw;
         background-color: #707070;
+        img {
+          height: 100%;
+          width: 100%;
+        }
       }
       .info {
         position: absolute;
@@ -27,9 +33,11 @@
         height: 100%;
         width: 40vw;
         background-color: whitesmoke;
+        padding: 0 5vw 0 5vw;
         p {
-          padding-top: 2vh;
+          padding-top: 5vh;
           color: black;
+          margin-bottom: 10vh;
         }
         a {
           color: black;
