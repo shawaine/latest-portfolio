@@ -19,7 +19,7 @@ html(lang="en")
                         | Cidro 
                         | Zeirwayne
             .menu
-                ul
+                ul.menulist
                     li 
                         a(href="#home") Home
                     li 
@@ -32,6 +32,8 @@ html(lang="en")
                         a(href="#about") About Me
                     li 
                         a(href="#contact") Contact
+            .burger
+                img(src="./image/burger-black.png", alt="burger")
 
         section#home.full-screen
             .blurred-part
@@ -130,7 +132,7 @@ html(lang="en")
                 h3 Contact 
                     h6 (still working o n backend stuff.   :x)
             .container
-                form(method='POST' onsubmit="return sendEmail()")
+                form
                     h1 Send me an email
                     .field.top-margin
                         label.label Name

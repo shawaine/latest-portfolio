@@ -25,7 +25,6 @@ const textSlider = element => {
     element.classList.add("slide");
   } else {
     element.classList.remove("slide");
-    console.log("asdasdsadf");
   }
 };
 
@@ -50,4 +49,29 @@ $('a[href*="#"]').on("click", function(e) {
   );
 });
 
-/* sending email */
+/* burger */
+$(".burger").on("click", () => {
+  $(".menulist").toggleClass("nav-active");
+
+  if ($(".menulist").hasClass("nav-active")) {
+    $(".menulist li").animate(
+      {
+        opacity: 1
+      },
+      1750
+    );
+    $(".menulist li").css("transform", "translate(0px,0)");
+  } else {
+    $(".menulist li").animate(
+      {
+        opacity: 0
+      },
+      1750
+    );
+    $(".menulist li").css("transform", "translate(50px,0)");
+  }
+});
+//sliding the links
+// ((link, index) => {
+//   link.animete((animation = `slideLinks .5s ease forwards ${index / 7}s`));
+// });
