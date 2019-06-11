@@ -11716,32 +11716,24 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background-color: white;
   z-index: 100;
 }
 
 nav .branding {
-  margin-left: 3em;
   cursor: pointer;
-}
-
-nav .branding a {
   color: black;
   text-decoration: none;
+  width: 50%;
 }
 
-nav .branding a h1 {
+nav .branding h1 {
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  font-size: 1.5em;
+  font-size: calc(0.3em + 1.5vw + 1vh);
   font-family: "Ubuntu", sans-serif;
-}
-
-nav .menu {
-  margin-right: 2em;
 }
 
 nav .menu li {
@@ -11764,28 +11756,16 @@ nav .menu li a:hover {
 
 nav .burger {
   display: none;
-  margin-right: 2em;
   cursor: pointer;
 }
 
-@media screen and (max-width: 420px) {
-  nav .branding {
-    margin-left: 1em;
-  }
-  nav .branding a h1 {
-    font-size: 1em;
-  }
-  nav .burger img {
-    height: 5vh;
-  }
+nav .burger img {
+  height: 5vh;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   nav body {
     overflow-x: hidden;
-  }
-  nav .branding {
-    margin-left: 2em;
   }
   nav .menulist {
     position: absolute;
@@ -11806,7 +11786,7 @@ nav .burger {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     height: 90vh;
-    width: 50%;
+    width: 40%;
     -webkit-transition: -webkit-transform 0.5s ease;
     transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
@@ -11816,10 +11796,10 @@ nav .burger {
   }
   nav .menulist li {
     opacity: 0;
-    -webkit-transition: -webkit-transform 2s ease;
-    transition: -webkit-transform 2s ease;
-    transition: transform 2s ease;
-    transition: transform 2s ease, -webkit-transform 2s ease;
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }
@@ -11880,18 +11860,17 @@ nav .burger {
 
 #home .intro .name {
   width: 60vw;
-  border-right: 2px solid white;
-  padding-right: 3.5em;
 }
 
 #home .intro .name h1 {
   -webkit-transform: translateY(-10%);
           transform: translateY(-10%);
   font-family: "Ubuntu", sans-serif;
-  font-size: 8vh;
+  font-size: calc(0.8em + 3.8vw);
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: white;
+  border-right: 2px solid white;
 }
 
 #home .intro .quote {
@@ -11902,7 +11881,7 @@ nav .burger {
   -webkit-transform: translateY(-10%);
           transform: translateY(-10%);
   font-family: "Gloria Hallelujah", cursive;
-  font-size: 3vh;
+  font-size: calc(0.7em + 1vw);
   color: white;
 }
 
@@ -11933,6 +11912,12 @@ nav .burger {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #home body {
+    color: red;
   }
 }
 

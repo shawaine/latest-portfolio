@@ -25,15 +25,14 @@
     flex-wrap: wrap;
     .name {
       width: 60vw;
-      border-right: 2px solid white;
-      padding-right: 3.5em;
       h1 {
         transform: translateY(-10%);
         font-family: "Ubuntu", sans-serif;
-        font-size: 8vh;
+        font-size: calc(0.8em + 3.8vw);
         letter-spacing: 0.3em;
         text-transform: uppercase;
         color: white;
+        border-right: 2px solid white;
       }
     }
     .quote {
@@ -41,7 +40,7 @@
       p {
         transform: translateY(-10%);
         font-family: "Gloria Hallelujah", cursive;
-        font-size: 3vh;
+        font-size: calc(0.7em + 1vw);
         color: white;
       }
     }
@@ -55,13 +54,22 @@
       animation: blinker 0.7s ease infinite alternate;
     }
   }
-}
 
-@keyframes blinker {
-  from {
-    opacity: 0;
+  @keyframes blinker {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
-  to {
-    opacity: 1;
+
+  @media screen and (max-width: $androidViewPortrait) {
+    body {
+      color: red;
+    }
+  }
+
+  @media screen and (max-width: $ipadViewLandscape) {
   }
 }

@@ -4,27 +4,24 @@ nav {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: white;
   z-index: 100;
 
   .branding {
-    margin-left: 3em;
     cursor: pointer;
-    a {
-      color: black;
-      text-decoration: none;
-      h1 {
-        letter-spacing: 0.4em;
-        text-transform: uppercase;
-        font-size: 1.5em;
-        font-family: "Ubuntu", sans-serif;
-      }
+    color: black;
+    text-decoration: none;
+    width: 50%;
+    h1 {
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      font-size: calc(0.3em + 1.5vw + 1vh);
+      font-family: "Ubuntu", sans-serif;
     }
   }
 
   .menu {
-    margin-right: 2em;
     li {
       display: inline;
       margin-left: 1em;
@@ -35,7 +32,6 @@ nav {
         list-style: none;
         text-decoration: none;
         letter-spacing: 0.2em;
-
         &:hover {
           color: black;
         }
@@ -45,27 +41,15 @@ nav {
 
   .burger {
     display: none;
-    margin-right: 2em;
     cursor: pointer;
-  }
-  @media screen and (max-width: $androidViewPortrait) {
-    .branding {
-      margin-left: 1em;
-      a h1 {
-        font-size: 1em;
-      }
-    }
-    .burger img {
+    img {
       height: 5vh;
     }
   }
 
-  @media screen and (max-width: $ipadViewLandscape) {
+  @media (max-width: $ipadViewLandscape) {
     body {
       overflow-x: hidden;
-    }
-    .branding {
-      margin-left: 2em;
     }
     .menulist {
       position: absolute;
@@ -78,12 +62,12 @@ nav {
       align-items: center;
       justify-content: space-around;
       height: 90vh;
-      width: 50%;
+      width: 40%;
       transition: transform 0.5s ease;
       transform: translateX(100%);
       li {
         opacity: 0;
-        transition: transform 2s ease;
+        transition: transform 1s ease;
         transform: translateX(100%);
       }
     }
