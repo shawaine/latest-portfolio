@@ -11651,8 +11651,8 @@ font-family: 'Ubuntu', sans-serif;*/
 }
 
 .heading {
-  padding: 15vh 0 5vh 0;
-  font-size: 1.8em;
+  padding: 12vh 0 5vh 0;
+  font-size: calc(0.8em + 1.8vw);
   letter-spacing: 0.3em;
 }
 
@@ -11726,7 +11726,6 @@ nav .branding {
   cursor: pointer;
   color: black;
   text-decoration: none;
-  width: 50%;
 }
 
 nav .branding h1 {
@@ -11836,7 +11835,7 @@ nav .burger img {
   background: url("../image/home-bg.jpg") no-repeat center center fixed;
   background-size: cover;
   position: absolute;
-  height: 30vh;
+  height: calc(2.5em + 25vh);
   width: 100%;
   -webkit-filter: blur(10px) brightness(50%);
           filter: blur(10px) brightness(50%);
@@ -11863,8 +11862,6 @@ nav .burger img {
 }
 
 #home .intro .name h1 {
-  -webkit-transform: translateY(-10%);
-          transform: translateY(-10%);
   font-family: "Ubuntu", sans-serif;
   font-size: calc(0.8em + 3.8vw);
   letter-spacing: 0.3em;
@@ -11878,8 +11875,6 @@ nav .burger img {
 }
 
 #home .intro .quote p {
-  -webkit-transform: translateY(-10%);
-          transform: translateY(-10%);
   font-family: "Gloria Hallelujah", cursive;
   font-size: calc(0.7em + 1vw);
   color: white;
@@ -11946,7 +11941,6 @@ nav .burger img {
 }
 
 #projects .project-list .project-container {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11962,8 +11956,6 @@ nav .burger img {
 }
 
 #projects .project-list .project-container .preview {
-  position: absolute;
-  left: 0;
   height: 100%;
   width: 30vw;
   background-color: #707070;
@@ -11975,25 +11967,33 @@ nav .burger img {
 }
 
 #projects .project-list .project-container .info {
-  position: absolute;
-  right: 0;
+  position: relative;
   height: 100%;
   width: 40vw;
   background-color: whitesmoke;
-  padding: 0 5vh 0 5vh;
+  font-size: calc(0.2em + 1.5vw);
+  color: black !important;
 }
 
-#projects .project-list .project-container .info p {
-  padding-top: 5vh;
-  color: black;
-  margin-bottom: 5vh;
+#projects .project-list .project-container .info .desc {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
 }
 
-#projects .project-list .project-container .info a {
-  color: black;
+#projects .project-list .project-container .info .demo {
+  position: absolute;
   text-decoration: none;
-  padding-top: 5vh;
-  padding-bottom: 2vh;
+  left: 15%;
+  bottom: 10%;
+}
+
+#projects .project-list .project-container .info .source {
+  position: absolute;
+  text-decoration: none;
+  right: 15%;
+  bottom: 10%;
 }
 
 #skills {
