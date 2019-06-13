@@ -4,7 +4,7 @@ const greeting = document.querySelector(".greeting");
 const part = document.querySelector(".part");
 const story = document.querySelector(".story");
 
-/* hide the preloader after load*/
+/* hides the preloader after load*/
 window.addEventListener("load", () => {
   preloader.classList.add("preloader-done");
 });
@@ -19,7 +19,6 @@ function bgChanger() {
 }
 
 /* slide triger in about*/
-
 const textSlider = element => {
   if (this.scrollY > document.body.scrollHeight / 2) {
     element.classList.add("slide");
@@ -27,7 +26,6 @@ const textSlider = element => {
     element.classList.remove("slide");
   }
 };
-
 window.addEventListener("scroll", function() {
   bgChanger();
   textSlider(greeting);
@@ -56,6 +54,7 @@ $(".arrow-down").click(function(e) {
     "linear"
   );
 });
+// goes to a specified div
 $('a[href*="#"]').on("click", function(e) {
   e.preventDefault();
 
@@ -66,57 +65,57 @@ $('a[href*="#"]').on("click", function(e) {
     500,
     "linear"
   );
-  /* reset the side nav*/
-  $(".menulist").toggleClass("nav-active");
-  let lighten = "none";
-  $("section, footer").css({
-    filter: lighten,
-    webkitFilter: lighten,
-    mozFilter: lighten,
-    oFilter: lighten,
-    msFilter: lighten
-  });
+  // hies the side nav
+  if ($(".menulist").hasClass("nav-active")) {
+    $(".menulist").toggleClass("nav-active");
+    animateNav($(".menulist").hasClass("nav-active"));
+  }
 });
 
 /* burger */
 $(".burger").on("click", () => {
-  animateNav();
+  $(".menulist").toggleClass("nav-active");
+  animateNav($(".menulist").hasClass("nav-active"));
 });
 
-const animateNav = () => {
-  $(".menulist").toggleClass("nav-active");
-  if ($(".menulist").hasClass("nav-active")) {
-    $(".menulist li").animate(
-      {
-        opacity: 1
-      },
-      1000
-    );
-    $(".menulist li").css("transform", "translate(0px,0)");
-    let darken = "brightness(60%)";
-    $("section, footer").css({
-      filter: darken,
-      webkitFilter: darken,
-      mozFilter: darken,
-      oFilter: darken,
-      msFilter: darken
-    });
+const animateNav = flag => {
+  let shade, trans, opa;
+  if (flag) {
+    shade = "brightness(50%)";
+    trans = "0px";
+    opa = 1;
   } else {
-    filterVal = 0;
-    $(".menulist li").animate(
-      {
-        opacity: 0
-      },
-      1000
-    );
-    $(".menulist li").css("transform", "translate(50px,0)");
-    let lighten = "none";
-    $("section, footer").css({
-      filter: lighten,
-      webkitFilter: lighten,
-      mozFilter: lighten,
-      oFilter: lighten,
-      msFilter: lighten
-    });
+    shade = "brightness(100%)";
+    trans = "50px";
+    opa = 0;
   }
+  $(".menulist li").css("transform", `translate(${trans},0)`);
+  $(".menulist li").animate(
+    {
+      opacity: opa
+    },
+    1000
+  );
+  $("section, footer").css({
+    filter: shade,
+    webkitFilter: shade,
+    mozFilter: shade,
+    oFilter: shade,
+    msFilter: shade
+  });
 };
+
+/* hides the navbar*/
+$("section").click(function(e) {
+  e.preventDefault();
+  if ($(".menulist").hasClass("nav-active")) {
+    $(".menulist").toggleClass("nav-active");
+    animateNav($(".menulist").hasClass("nav-active"));
+  }
+});
+$(window).scroll(function() {
+  if ($(".menulist").hasClass("nav-active")) {
+    $(".menulist").toggleClass("nav-active");
+    animateNav($(".menulist").hasClass("nav-active"));
+  }
+});

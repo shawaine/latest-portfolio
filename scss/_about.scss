@@ -14,15 +14,16 @@
       opacity: 0;
     }
     .greeting {
-      margin-top: 10vh;
-      font-size: 1.8em;
+      margin-top: 18vh;
+      font-size: calc(0.5em + 1vw);
     }
     .part {
       font-family: "Gloria Hallelujah", cursive;
+      font-size: calc(0.3em + 1vw);
     }
     .story {
-      margin-top: 10vh;
-      font-size: 1.2em;
+      margin-top: 8vh;
+      font-size: calc(0.3em + 1vw);
       line-height: 2em;
     }
     .slide {

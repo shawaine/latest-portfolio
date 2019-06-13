@@ -1,4 +1,3 @@
-@import "../node_modules/bulma/bulma.sass";
 @import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Poppins|Ubuntu:700&display=swap");
 /*font-family: 'Gloria Hallelujah', cursive;
 font-family: 'Ubuntu', sans-serif;*/
@@ -53,9 +52,6 @@ font-family: 'Ubuntu', sans-serif;*/
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-.top-margin {
-  margin-top: 2vh;
 }
 
 .bg-transition {

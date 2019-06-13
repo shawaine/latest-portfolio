@@ -2,34 +2,55 @@
   height: 100vh;
   color: black;
   background-color: white;
-
-  h1 {
-    margin-bottom: 2vh;
-    font-size: 1.3em;
+  h6 {
+    font-size: calc(0.15em + 1vw);
   }
-  .input,
-  select {
-    border: 1px solid #3d3d3d;
-  }
-
-  select,
-  option {
-    text-align-last: center;
-  }
-  .control {
-    text-align: center;
-    .button {
+  form {
+    font-size: calc(0.3em + 1vw);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    label {
+      font-weight: bold;
+      margin-top: 2vh;
+    }
+    input,
+    select {
+      height: 4vh;
+    }
+    .field {
+      border: 1px solid #3d3d3d;
+      width: 50%;
+      border-radius: 3px;
+    }
+    .reason {
+      text-align-last: center;
+    }
+    .message {
+      resize: none;
+    }
+    .send {
+      margin-top: 2vh;
       background-color: #3d3d3d;
       height: 5vh;
       width: 10vw;
+      border: none;
+      color: white;
+      border-radius: 3px;
+      font-size: calc(0.5em + 1.5vw);
+      &:hover {
+        background-color: white;
+        color: #3d3d3d;
+        border: 2px solid #3d3d3d;
+      }
     }
   }
-  .select,
-  select {
-    width: 30vw;
-  }
-  .textarea {
-    resize: none;
-    border: 1px solid #3d3d3d;
+
+  @media (min-width: $ipadViewLandscape) {
+    .field {
+      width: 30% !important;
+    }
   }
 }

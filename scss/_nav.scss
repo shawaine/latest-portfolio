@@ -31,6 +31,7 @@ nav {
         list-style: none;
         text-decoration: none;
         letter-spacing: 0.2em;
+        font-size: calc(0.2em + 1vw);
         &:hover {
           color: black;
         }

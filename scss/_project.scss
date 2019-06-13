@@ -11,7 +11,7 @@
     .project-container {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
       background-color: black;
       height: 30vh;
       width: 70vw;
@@ -20,8 +20,9 @@
         width: 30vw;
         background-color: #707070;
         img {
-          height: 100%;
-          width: 100%;
+          background-size: cover;
+          max-height: 100%;
+          max-width: 100%;
         }
       }
       .info {
@@ -41,13 +42,13 @@
         .demo {
           position: absolute;
           text-decoration: none;
-          left: 15%;
+          left: 10%;
           bottom: 10%;
         }
         .source {
           position: absolute;
           text-decoration: none;
-          right: 15%;
+          right: 10%;
           bottom: 10%;
         }
       }
