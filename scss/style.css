@@ -1,0 +1,596 @@
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Poppins|Ubuntu:700&display=swap");
+/*font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Ubuntu', sans-serif;*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: black;
+}
+
+.full-screen {
+  height: 100vh;
+  width: 100%;
+  color: white;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.heading {
+  padding: 12vh 0 5vh 0;
+  font-size: calc(0.8em + 1.8vw);
+  letter-spacing: 0.3em;
+}
+
+.container {
+  height: 50vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bg-transition {
+  background: #191919 !important;
+}
+
+#preloader {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: visibility 0.5s ease;
+  transition: visibility 0.5s ease;
+}
+
+.preloader-done {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+nav {
+  position: fixed;
+  height: 10vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: white;
+  z-index: 100;
+}
+
+nav .branding {
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+nav .branding h1 {
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  font-size: calc(0.3em + 1.5vw + 1vh);
+  font-family: "Ubuntu", sans-serif;
+}
+
+nav .menu li {
+  display: inline;
+  margin-left: 1em;
+  padding: 0.8em;
+}
+
+nav .menu li a {
+  color: #646464;
+  font-weight: 600;
+  list-style: none;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  font-size: calc(0.2em + 1vw);
+}
+
+nav .menu li a:hover {
+  color: black;
+}
+
+nav .burger {
+  display: none;
+  cursor: pointer;
+}
+
+nav .burger img {
+  height: 5vh;
+}
+
+@media (max-width: 1024px) {
+  nav body {
+    overflow-x: hidden;
+  }
+  nav .menulist {
+    position: absolute;
+    top: 10vh;
+    right: 0px;
+    margin: 0;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 90vh;
+    width: 40%;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  nav .menulist li {
+    opacity: 0;
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  nav .burger {
+    display: block;
+  }
+  nav .nav-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+#home {
+  position: relative;
+  background: url("../image/home-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#home .blurred-part {
+  background: url("../image/home-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: absolute;
+  height: calc(2.5em + 25vh);
+  width: 100%;
+  -webkit-filter: blur(10px) brightness(50%);
+          filter: blur(10px) brightness(50%);
+}
+
+#home .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 20vh;
+  width: 100%;
+  z-index: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#home .intro .name {
+  width: 60vw;
+}
+
+#home .intro .name h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: calc(0.6em + 4vw);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: white;
+  border-right: 2px solid white;
+}
+
+#home .intro .quote {
+  width: 28vw;
+}
+
+#home .intro .quote p {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: calc(0.6em + 1vw);
+  color: white;
+}
+
+#home .arrow-down {
+  position: absolute;
+  bottom: 0;
+}
+
+#home .arrow-down img {
+  height: 10vh;
+  width: auto;
+  -webkit-animation: blinker 0.7s ease infinite alternate;
+          animation: blinker 0.7s ease infinite alternate;
+}
+
+@-webkit-keyframes blinker {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blinker {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #home body {
+    color: red;
+  }
+}
+
+#projects {
+  background-color: #3d3d3d;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+#projects .project-list {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 10vh;
+}
+
+#projects .project-list .project-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: black;
+  height: 30vh;
+  width: 70vw;
+}
+
+#projects .project-list .project-container .preview {
+  height: 100%;
+  width: 30vw;
+  background-color: #707070;
+}
+
+#projects .project-list .project-container .preview img {
+  background-size: cover;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#projects .project-list .project-container .info {
+  position: relative;
+  height: 100%;
+  width: 40vw;
+  background-color: whitesmoke;
+  font-size: calc(0.2em + 1.5vw);
+}
+
+#projects .project-list .project-container .info .desc {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+}
+
+#projects .project-list .project-container .info .demo {
+  position: absolute;
+  text-decoration: none;
+  left: 10%;
+  bottom: 10%;
+}
+
+#projects .project-list .project-container .info .source {
+  position: absolute;
+  text-decoration: none;
+  right: 10%;
+  bottom: 10%;
+}
+
+#skills {
+  background-color: #3d3d3d;
+}
+
+#skills .skill-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#skills .skill-container .skill-list ul {
+  top: 0;
+  padding: 1em;
+  background-color: #191919;
+  font-size: calc(0.5em + 1.5vw);
+}
+
+#skills .skill-container .skill-list ul li {
+  font-size: 0.65em;
+}
+
+#about {
+  background-color: #191919;
+  color: #dbdbdb;
+  text-align: left !important;
+}
+
+#about .container {
+  height: 50vh;
+  letter-spacing: 0.3em;
+}
+
+#about .container h1,
+#about .container h2,
+#about .container p {
+  text-align: left;
+  width: 70vw;
+  opacity: 0;
+}
+
+#about .container .greeting {
+  margin-top: 18vh;
+  font-size: calc(0.5em + 1vw);
+}
+
+#about .container .part {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: calc(0.3em + 1vw);
+}
+
+#about .container .story {
+  margin-top: 8vh;
+  font-size: calc(0.3em + 1vw);
+  line-height: 2em;
+}
+
+#about .container .slide {
+  -webkit-animation: slideToRight 1s ease forwards;
+          animation: slideToRight 1s ease forwards;
+}
+
+@-webkit-keyframes slideToRight {
+  from {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideToRight {
+  from {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#contact {
+  height: 100vh;
+  color: black;
+  background-color: white;
+}
+
+#contact h6 {
+  font-size: calc(0.15em + 1vw);
+}
+
+#contact form {
+  font-size: calc(0.3em + 1vw);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact form label {
+  font-weight: bold;
+  margin-top: 2vh;
+}
+
+#contact form input,
+#contact form select {
+  height: 4vh;
+}
+
+#contact form .field {
+  border: 1px solid #3d3d3d;
+  width: 50%;
+  border-radius: 3px;
+}
+
+#contact form .reason {
+  text-align-last: center;
+}
+
+#contact form .message {
+  resize: none;
+}
+
+#contact form .send {
+  margin-top: 2vh;
+  background-color: #3d3d3d;
+  height: 5vh;
+  width: 10vw;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  font-size: calc(0.5em + 1.5vw);
+}
+
+#contact form .send:hover {
+  background-color: white;
+  color: #3d3d3d;
+  border: 2px solid #3d3d3d;
+}
+
+@media (min-width: 1024px) {
+  #contact .field {
+    width: 30% !important;
+  }
+}
+
+footer .social-media {
+  background-color: #3d3d3d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .social-media .sicon {
+  margin: 2vh;
+  height: 5vh;
+  cursor: pointer;
+}
+
+footer .rights {
+  font-size: calc(0.5em + 1.2vw);
+  background-color: #191919;
+  color: white;
+  padding: 1vh;
+}
+
+footer .rights strong {
+  letter-spacing: 0.2em;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

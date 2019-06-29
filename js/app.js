@@ -119,3 +119,21 @@ $(window).scroll(function() {
     animateNav($(".menulist").hasClass("nav-active"));
   }
 });
+
+// Demo and Sources
+$(".dcalc").click(function(e) {
+  e.preventDefault();
+  window.open("https://shawaine.github.io/calculator/");
+});
+$(".scalc").click(function(e) {
+  e.preventDefault();
+  window.open("https://github.com/shawaine/calculator");
+});
+$(".drec").click(function(e) {
+  e.preventDefault();
+  window.open("https://shawaine.github.io/recipe-app/");
+});
+$(".srec").click(function(e) {
+  e.preventDefault();
+  window.open("https://github.com/shawaine/recipe-app");
+});
